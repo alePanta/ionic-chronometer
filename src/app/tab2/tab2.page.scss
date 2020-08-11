@@ -1,0 +1,24 @@
+@import "../../global";
+
+.title {
+    color: $header;
+}
+
+ion-list-header {
+    font-size: 18px;
+    margin-top: 30px;
+    
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+:host ::ng-deep ion-list {
+    font-weight: lighter;
+    --ion-background-color: transparent;
+    --ion-text-color: white;
+
+    ion-item {
+       --ion-border-color: #212F3D;
+    }
+}

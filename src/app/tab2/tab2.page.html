@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-text>
+        <h1 class="title">Configuration</h1>
+      </ion-text>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg">
+  <!-- <div id="main-container"> -->
+    <ion-list>
+      <ion-radio-group value="one">
+        <ion-list-header>
+          <ion-label>Amount of intervals</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-label>Amount</ion-label>
+          <ion-select value="1" (ionChange)="changeAmount($event)">
+            <ion-select-option *ngFor="let intervalAmount of intervalsAmount; let ind = index" value="{{ind + 1}}">{{ind + 1}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+    
+      </ion-radio-group>
+    
+      <ion-list-header>
+        <ion-label>Duration of Intervals (seconds)</ion-label>
+      </ion-list-header>
+
+      <ion-item *ngFor="let intervalLabel of intervalsLabel; let ind = index">
+        <ion-label>{{intervalLabel}}</ion-label>
+        <ion-select value="20" [attr.data-index]="ind" (ionChange)="changeIntervalTime($event)">
+          <ion-select-option *ngFor="let second of seconds; let ind = index" value="{{ind + 1}}">{{ind + 1}}''</ion-select-option >
+        </ion-select>
+      </ion-item>
+
+      <ion-list-header>
+        <ion-label>Sounds</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Interval finish</ion-label>
+        <ion-toggle slot="end" checked (ionChange)="handlerFXEndChange($event)"></ion-toggle>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Before interval finish</ion-label>
+        <ion-toggle slot="end" checked (ionChange)="handlerFXBeforeEndChange($event)"></ion-toggle>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Seconds before interval finish</ion-label>
+        <ion-select [disabled]="isDisabledBefore" value="5" (ionChange)="changeSoundBeforeEndInterval($event)">
+          <ion-select-option value="1">1''</ion-select-option>
+          <ion-select-option value="2">2''</ion-select-option>
+          <ion-select-option value="3">3''</ion-select-option>
+          <ion-select-option value="4">4''</ion-select-option>
+          <ion-select-option value="5">5''</ion-select-option>
+          <ion-select-option value="6">6''</ion-select-option>
+          <ion-select-option value="7">7''</ion-select-option>
+          <ion-select-option value="8">8''</ion-select-option>
+          <ion-select-option value="9">9''</ion-select-option>
+          <ion-select-option value="10">10''</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+    </ion-list>
+  <!-- </div> -->
+</ion-content>

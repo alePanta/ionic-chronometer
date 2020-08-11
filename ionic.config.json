@@ -1,0 +1,8 @@
+{
+  "name": "Chronometer",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true" class="algo">
+  <div id="main-container">
+    <!-- https://ionicframework.com/docs/components -->
+    <div class="cont-info">
+      <p class="chronometer">10:06:81</p>
+
+      <p class="interval">{{intervalView}}</p>
+
+      <div class="cont-comand">
+        <ion-tab-button (click)="handlerPaly()">
+          <ion-icon class="comand" name="caret-forward-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="handlerStop()">
+          <ion-icon class="comand" name="pause-outline"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button (click)="handlerResetAll()">
+          <ion-icon class="comand" name="reload-outline"></ion-icon>
+        </ion-tab-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

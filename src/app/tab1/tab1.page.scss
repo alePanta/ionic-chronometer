@@ -1,0 +1,50 @@
+@import "../../global";
+
+#main-container {
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    .cont-info {
+        width: 100%;
+
+        .chronometer {
+            color: $chronometer;
+            font-family: cronometro;
+            font-size: 40px;
+            text-align: center;
+            display: block;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            width: 100%;
+        }
+        
+        .interval {
+            color: $interval;
+            font-family: cronometro;
+            font-size: 150px;
+            text-align: center;
+        }
+    
+        .cont-comand {
+            display: flex;
+            width: 100%;
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+
+            .comand {
+                font-size: 50px;
+                color: $chronometer;
+                width: 100%;
+            } 
+            
+        }
+
+    }
+
+
+}
